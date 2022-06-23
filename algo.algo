@@ -1,0 +1,26 @@
+ALGORITHM phrase
+VAR
+    p:STRING;
+    i:INTEGER:=0;
+    nbrword:INTEGER:=0;
+    nbrvoy:INTEGER :=0;
+    nbcaract:INTEGER:=0;
+BEGIN
+    READ(p)
+        WHILE (p[i] <> '.') DO
+        IF (p[i]=' ') THEN
+        nbrword = nbrword +1 
+        END_IF
+        IF (p[i] in ['a','e','u','i','o']) THEN
+        nbrvoy = nbrvoy +1 ;
+        END_IF
+        IF (p[i] <> ' ') THEN
+        nbcaract = nbcaract + 1
+        END_IF
+        i = i + 1 
+        END_WHILE
+        write(p)
+        write(nbrword)
+        write(nbrvoy)
+        write(nbcaract)
+END
