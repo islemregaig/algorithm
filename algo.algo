@@ -9,15 +9,15 @@ BEGIN
     READ(p)
         WHILE (p[i] <> '.') DO
         IF (p[i]=' ') THEN
-        nbrword = nbrword +1 
+        nbrword := nbrword +1 
         END_IF
         IF (p[i] in ['a','e','u','i','o']) THEN
-        nbrvoy = nbrvoy +1 ;
+        nbrvoy := nbrvoy +1 ;
         END_IF
         IF (p[i] <> ' ') THEN
-        nbcaract = nbcaract + 1
+        nbcaract := nbcaract + 1
         END_IF
-        i = i + 1 
+        i := i + 1 
         END_WHILE
         write(p)
         write(nbrword)
