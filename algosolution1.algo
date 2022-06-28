@@ -1,0 +1,19 @@
+ALGORITHM htable
+VAR
+    i,j,sum:INTEGER;
+    arr1 : ARRAY_OF INTEGER[a1];
+    arr2 : ARRAY_OF INTEGER[a2];
+    sum:=0;
+BEGIN
+    FOR i FROM 0 TO a1-1 STEP step  DO
+        IF (arr1[i] <> arr2[j) THEN
+        sum:= sum+arr1[i]
+        END_IF
+    END_FOR
+        FOR j FROM 0 TO a2-1 STEP step  DO
+        IF (arr2[j] <> arr1[i) THEN
+        sum:= sum+arr2[j]
+        END_IF
+    END_FOR
+    read(sum)
+END

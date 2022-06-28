@@ -1,0 +1,26 @@
+ALGORITHM algorithm_name
+VAR
+    i,j,a1,a2;e:INTEGER;
+    arr1 : ARRAY_OF INTEGER[a1];
+    arr2 : ARRAY_OF INTEGER[a2];
+    arr : ARRAY_OF INTEGER ;
+    htab: HASH_TABLE<INTEGER,INTEGER>
+    count:INTEGER:=1;
+    sum:INTEGER:=0;
+
+BEGIN
+    FOR i FROM 0 TO a1-1 STEP step  DO
+    read(arr1[i])
+    IF (arr1[i] <> arr2[j) THEN
+        count:= htab.insert(e,arr1[i])
+        sum:=sum+(count+1)
+    END_IF
+    END_FOR
+    FOR j FROM 0 TO a2-1 STEP step  DO
+    read(arr2[j])
+    IF (arr2[j] <> arr1[i) THEN
+        count:= htab.insert(e,arr2[j])
+        sum:=sum+(count+1)
+    END_IF
+    END_FOR
+END
